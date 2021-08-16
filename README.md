@@ -1,7 +1,7 @@
 # The-Market
 An e-commerce web application using Flask, HTML and CSS
 ## Navigating the file system: 
-   - :open_file_folder: **Projects** : root folder for game app
+   - :open_file_folder: **Projects** : root folder
       -  :open_file_folder: **static/** : Contains static files like image files and CSS files
            -   :open_file_folder: **login.css** : css file for login and register 
            -   There are also image files present here that is loaded in my html files when required. 
