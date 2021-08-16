@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create Listing</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{{ url_for('index') }}">The Market</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Create Listing</li>
+            </ol>
+        </nav>
+        {% if messages %}
+            <h2>{{ messages }}</h2>
+        {% endif %}
+        <form action="/createlisting" style="margin: 10px;" method="post">
+            <div class="mb-3">
+                <label class="form-label">Product Name:</label>
+                <input autocomplete="off" type="text" style="width:500px;" class="form-control" id="product-name" name="itemname">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Description:</label>
+                <input type="text" style="width:500px; line-height:100px;" class="form-control" id="product-description" name="itemdescription">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Price:</label>
+                <input type="number" min="1" style="width:500px;" class="form-control" id="product-price" name="itemprice">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Category:</label>
+                <input type="text" style="width:500px;" class="form-control" id="product-category" name="itemcategory">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Create A Listing">
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    </body>
+</html>

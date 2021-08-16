@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="static/image-two.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="static/image-four.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="static/image-three.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <hr>
+      <div id="products"> 
+        <div class="card" style="width: 18rem; margin:10px; float:left;">
+          <img src="static/image-seven.jpg" height="180" class="card-img-top" alt="...">
+          <div class="card-body">
+            <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='All') }}"><b>All Items</b></a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-one.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Health') }}"><b>Health</b></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-five.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Snacks') }}"><b>Snacks</b></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-six.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Baby') }}"><b>Baby</b></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-eight.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Electronics') }}"><b>Electronics</b></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-nine.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Books') }}"><b>Books</b></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-ten.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Home') }}"><b>Home</b></a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem; margin:10px; float:left;">
+            <img src="static/image-eleven.jpg" height="180" class="card-img-top" alt="...">
+            <div class="card-body">
+              <a style="color: black;" class="nav-link active" aria-current="page" href="{{ url_for('shop', category='Entertainment') }}"><b>Entertainment</b></a>
+            </div>
+          </div>
+      </div>
+
+{% endblock %}

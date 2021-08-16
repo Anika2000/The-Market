@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1 style="text-align: center;">{{ header }}</h1>
+    {% for item in items %}
+      <div class="card" style="width: 18rem; margin: 10px; float:left;">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Price: {{ item.price }}</li>
+          </ul>
+          <div class="card-body">
+            <form action="/add" method="post">
+              <textarea  style="display:none;" name="item_id">{{ item.id }}</textarea>
+              <input class="btn btn-primary" type="submit" value="Add to Cart">
+            </form>
+          </div>
+       </div>
+    {% endfor %}
+
+{% endblock %}
